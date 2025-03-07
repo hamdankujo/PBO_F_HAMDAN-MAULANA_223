@@ -12,14 +12,14 @@ public class LoginSystem {
         //data mahasiswa
         String namaMhs = "Hamdan Maulana";
         String nimMhs = "202410370110223";
-
+        //menu login
         System.out.println("Pilih Login:");
         System.out.println("1. Admin");
         System.out.println("2. Mahasiswa");
         System.out.print("Masukan Pilihan: ");
 
         int pilihan;
-
+        //validasi input cuman angka
         if (objInput.hasNextInt()){
             pilihan = objInput.nextInt();
             objInput.nextLine();
@@ -28,14 +28,14 @@ public class LoginSystem {
             objInput.close();
             return;
         }
-
+        //proses login admin
         if (pilihan == 1){
             while (true){
                 System.out.print("Masukkan Username: ");
                 String inputUserName = objInput.nextLine();
                 System.out.print("Masukkan Password: ");
                 String inputPassword = objInput.nextLine();
-
+                //validasi admin
                 if (inputUserName.equals(username)&&inputPassword.equals(password)){
                     System.out.println("Login Admin Berhasil");
                     break;
@@ -43,13 +43,13 @@ public class LoginSystem {
                     System.out.println("Login gagal! username atau password salah");
                 }
             }
-        }else if (pilihan == 2){
+        }else if (pilihan == 2){//login mahasigma
             while (true){
                 System.out.print("Masukkan Nama: ");
                 String inpuNamaMhs = objInput.nextLine();
                 System.out.print("Masukkan Nim: ");
                 String inputNim = objInput.nextLine();
-
+                //validasi login
                 if (inpuNamaMhs.equals(namaMhs)&&inputNim.equals(nimMhs)){
                     System.out.println("Login Mahasiswa Berhasil");
                     System.out.println("Nama: " + inpuNamaMhs);
@@ -59,9 +59,9 @@ public class LoginSystem {
                     System.out.println("Login gagal! nama atau nim salah");
                 }
             }
-        }else{
+        }else{//lek ndak valid
             System.out.println("inputan tidak valid mohon masukkan angka 1 atau 2");
         }
-        objInput.close();
+        objInput.close();//penutup scaner
     }
 }

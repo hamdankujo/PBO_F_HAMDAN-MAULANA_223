@@ -1,5 +1,5 @@
-import java.util.Scanner;
-import java.time.LocalDate;
+import java.util.Scanner; // Import library Scanner untuk input dari pengguna
+import java.time.LocalDate; // Import library LocalDate untuk mendapatkan tahun sekarang
 
 public class UserData {
     public static void main(String[] args) {
@@ -27,7 +27,7 @@ public class UserData {
         } else {
             jenisKelaminStr = "Tidak diketahui";
         }
-
+        // Menampilkan hasil data diri pengguna
         System.out.println("\nData Diri:");
         System.out.println("Nama         : " + nama);
         System.out.println("Jenis Kelamin: " + jenisKelaminStr);
