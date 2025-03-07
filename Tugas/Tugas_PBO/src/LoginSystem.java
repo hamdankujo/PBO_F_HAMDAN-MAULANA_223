@@ -19,7 +19,7 @@ public class LoginSystem {
         System.out.print("Masukan Pilihan: ");
 
         int pilihan;
-        //validasi input cuman angka
+        //validasi input cuman angka tokk
         if (objInput.hasNextInt()){
             pilihan = objInput.nextInt();
             objInput.nextLine();
@@ -43,7 +43,7 @@ public class LoginSystem {
                     System.out.println("Login gagal! username atau password salah");
                 }
             }
-        }else if (pilihan == 2){//login mahasigma
+        }else if (pilihan == 2){//login for MAHASIGMA
             while (true){
                 System.out.print("Masukkan Nama: ");
                 String inpuNamaMhs = objInput.nextLine();
