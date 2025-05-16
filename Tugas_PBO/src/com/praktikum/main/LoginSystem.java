@@ -1,9 +1,13 @@
+package com.praktikum.main;
+
+import com.praktikum.users.User;
+
 import java.util.Scanner;
 
 public class LoginSystem {
     private Scanner input;
-    private Admin admin;
-    private Mahasiswa mahasiswa;
+    private User admin;
+    private User mahasiswa;
 
     public static void main(String[] args) {
         LoginSystem app = new LoginSystem();
@@ -12,8 +16,28 @@ public class LoginSystem {
 
     public void start() {
         input = new Scanner(System.in);
-        admin = new Admin("Admin Mahasigma", "202410370110223", "Admin223", "Password223");
-        mahasiswa = new Mahasiswa("Hamdan", "202410370110223");
+        admin = new User("Admin Mahasigma", "202410370110223") {
+            @Override
+            public boolean login(String input1, String input2) {
+                return false;
+            }
+
+            @Override
+            public void displayAppMenu() {
+
+            }
+        };
+        mahasiswa = new User("Admin Mahasigma", "202410370110223") {
+            @Override
+            public boolean login(String input1, String input2) {
+                return false;
+            }
+
+            @Override
+            public void displayAppMenu() {
+
+            }
+        };
 
         boolean running = true;
 
@@ -36,18 +60,13 @@ public class LoginSystem {
             }
 
             switch (pilihan) {
-                case 1:
-                    loginSebagaiAdmin();
-                    break;
-                case 2:
-                    loginSebagaiMahasiswa();
-                    break;
-                case 0:
+                case 1 -> loginSebagaiAdmin();
+                case 2 -> loginSebagaiMahasiswa();
+                case 0 -> {
                     running = false;
                     System.out.println("Terima kasih telah menggunakan sistem login. See You Ganteng!");
-                    break;
-                default:
-                    System.out.println("❌ Waduh Pilihan tidak valid. Coba lagi lee.");
+                }
+                default -> System.out.println("❌ Waduh Pilihan tidak valid. Coba lagi lee.");
             }
         }
 
@@ -64,6 +83,8 @@ public class LoginSystem {
         if (admin.login(username, password)) {
             System.out.println("✅ Horee Login berhasil!");
             admin.displayInfo();
+            User user = admin; // Polymorphism
+            user.displayAppMenu();
         } else {
             System.out.println("❌ Aduh Login gagal! Username atau password salah.");
         }
@@ -79,6 +100,8 @@ public class LoginSystem {
         if (mahasiswa.login(nama, nim)) {
             System.out.println("✅ Horee Login berhasil!");
             mahasiswa.displayInfo();
+            User user = mahasiswa; // Polymorphism
+            user.displayAppMenu();
         } else {
             System.out.println("❌ Aduh Login gagal! Nama atau NIM salah.");
         }

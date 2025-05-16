@@ -1,3 +1,5 @@
+package APP;
+
 import perpustakaan.*;
 import java.util.*;
 
@@ -7,8 +9,8 @@ public class Main {
         List<Buku> daftarBuku = new ArrayList<>();
         List<Anggota> daftarAnggota = new ArrayList<>();
 
-        daftarAnggota.add(new Anggota("Hamdan Maulana", "202410370110223"));
-        daftarAnggota.add(new Anggota("Tanjidor dor dor", "202410370116969"));
+        daftarAnggota.add(new Anggota("Hamdan Maulana", "223"));
+        daftarAnggota.add(new Anggota("Zaki el jepanhg", "241"));
 
         Anggota anggotaAktif = null;
         while (anggotaAktif == null) {

@@ -1,4 +1,6 @@
-public class User {
+package com.praktikum.users;
+
+public abstract class User {
     private final String nama;
     private final String nim;
 
@@ -15,9 +17,8 @@ public class User {
         return nim;
     }
 
-    public boolean login(String input1, String input2) {
-        return false;
-    }
+    public abstract boolean login(String input1, String input2);
+    public abstract void displayAppMenu();
 
     public void displayInfo() {
         System.out.println("Nama: " + nama);
