@@ -1,12 +1,10 @@
-package com.praktikum.users;
+package praktikum.users;
 
-import com.praktikum.actions.MahasiswaActions;
+import praktikum.actions.MahasiswaActions;
 import com.praktikum.main.LoginSystem;
-import com.praktikum.models.Item;
+import praktikum.models.Item;
 
-public abstract class Mahasiswa extends User implements MahasiswaActions {
-
-    public Object id;
+public class Mahasiswa extends User implements MahasiswaActions {
 
     public Mahasiswa(String name, String id, String username, String password) {
         super(name, id, username, password);

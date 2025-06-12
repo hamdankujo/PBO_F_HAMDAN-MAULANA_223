@@ -7,9 +7,9 @@ class ManajemenStok {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        daftarBarang.add(new Barang("Buku", 10));
-        daftarBarang.add(new Barang("Pensil", 20));
-        daftarBarang.add(new Barang("Penghapus", 15));
+        daftarBarang.add(new Barang("Buku boko", 10));
+        daftarBarang.add(new Barang("Pensil ajaib", 20));
+        daftarBarang.add(new Barang("Penghapus pus", 15));
 
         boolean jalan = true;
         while (jalan) {

@@ -1,10 +1,13 @@
-package com.praktikum.users;
+package praktikum.users;
 
-import com.praktikum.actions.AdminActions;
+import praktikum.actions.AdminActions;
 import com.praktikum.main.LoginSystem;
-import com.praktikum.models.Item;
+import praktikum.main.LoginSystem;
+import praktikum.models.Item;
 
 public class Admin extends User implements AdminActions {
+
+    private praktikum.main.LoginSystem LoginSystem;
 
     public Admin(String name, String id, String username, String password) {
         super(name, id, username, password);
@@ -35,11 +38,6 @@ public class Admin extends User implements AdminActions {
                 default -> System.out.println("❌ Pilihan tidak valid.");
             }
         }
-    }
-
-    @Override
-    public Object getId() {
-        return null;
     }
 
     @Override

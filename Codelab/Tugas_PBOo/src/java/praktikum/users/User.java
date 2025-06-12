@@ -1,7 +1,7 @@
-package com.praktikum.users;
+package praktikum.users;
 
-import com.praktikum.main.LoginSystem;
-import com.praktikum.models.Item;
+
+import praktikum.models.Item;
 
 public abstract class User {
     protected String name;
@@ -47,6 +47,4 @@ public abstract class User {
                     item.getLocation() + " | " + item.getStatus());
         }
     }
-
-    public abstract Object getId();
 }

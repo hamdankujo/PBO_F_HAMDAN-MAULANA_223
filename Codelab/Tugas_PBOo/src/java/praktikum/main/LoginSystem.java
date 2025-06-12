@@ -1,6 +1,6 @@
-package com.praktikum.main;
+package praktikum.main;
 
-import com.praktikum.models.Item;
+import praktikum.models.Item;
 import com.praktikum.users.*;
 
 import java.util.ArrayList;
@@ -40,18 +40,8 @@ public class LoginSystem {
 
     public static void seedUsers() {
         userList.add(new Admin("Admin", "223", "admin", "nim223"));
-        userList.add(new Mahasiswa("Hamdan", "Nim221", "hamdan", "hamdan223") {
-            @Override
-            public Object getId() {
-                return null;
-            }
-        });
-        userList.add(new Mahasiswa("Alfin", "Nim247", "alfin", "alfin247") {
-            @Override
-            public Object getId() {
-                return null;
-            }
-        });
+        userList.add(new Mahasiswa("Hamdan", "Nim221", "hamdan", "hamdan223"));
+        userList.add(new Mahasiswa("Alfin", "Nim247", "alfin", "alfin247"));
     }
 
     public static int getInputAngka() {
